@@ -123,8 +123,15 @@
     </div>
 
     <!-- Hero Section -->
-    <header id="home" class="min-h-[80vh] flex items-center bg-cover bg-[center_top_20%] pt-40 pb-16 relative"
-        style="background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9)), url('image/greet.jpg');">
+    <header id="home" class="min-h-[80vh] flex items-center pt-40 pb-16 relative overflow-hidden">
+        <!-- Background Video -->
+        <video autoplay muted loop playsinline poster="image/greet.jpg" preload="metadata"
+            class="absolute inset-0 w-full h-full object-cover">
+            <source src="video/846-140823862_medium.mp4" type="video/mp4">
+        </video>
+        <!-- Dark Overlay for Readability -->
+        <div class="absolute inset-0 bg-gradient-to-b from-black/80 via-black/70 to-black/90"></div>
+
         <div class="container mx-auto px-6 text-left slide-up z-10 relative">
             <h1
                 class="text-3xl md:text-4xl lg:text-5xl font-semibold mb-6 text-accent leading-tight tracking-tight max-w-4xl">
