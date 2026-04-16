@@ -37,24 +37,50 @@
 
 <body class="bg-ash text-gray-900 font-sans selection:bg-accent/30 overflow-x-hidden">
 
-    <!-- Navigation Bar (Logo only) -->
+    <!-- Top Info Bar -->
+    <div id="topbar" class="bg-[#0f172a] text-gray-300 text-[11px] md:text-sm py-2 fixed top-0 w-full z-[60] transition-all duration-300 border-b border-white/5 font-sans">
+        <div class="container mx-auto px-4 lg:px-12 flex flex-col md:flex-row justify-center md:justify-between items-center gap-1.5 md:gap-0 text-center md:text-left">
+            <div class="font-light tracking-wide">
+                Ghana Education Digital Platform — Let's All Evolve Together
+            </div>
+            <div class="flex items-center gap-1.5 justify-center">
+                <i data-lucide="send" class="w-3.5 h-3.5"></i>
+                <a href="mailto:info@gedp.gov.gh" class="hover:text-white transition-colors font-light">info@gedp.gov.gh</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation Bar -->
     <nav id="navbar"
-        class="fixed top-0 w-full z-50 transition-all duration-300 py-4 md:py-4 bg-white backdrop-blur-xl shadow-lg">
+        class="fixed top-[52px] md:top-[36px] w-full z-50 transition-all duration-300 py-4 md:py-4 bg-black/20 backdrop-blur-md border-b border-white/10">
         <div class="container mx-auto px-6 lg:px-12 flex items-center justify-between">
             <a href="#" class="flex items-center">
-                <img src="image/GEDP Logo with Coat of Arms 1.png" alt="GES Logo" class="h-12 md:h-14 w-auto object-contain">
+                <img src="image/GEDP.png" alt="GES Logo" class="h-10 md:h-12 w-auto object-contain">
             </a>
 
+
             <!-- Desktop CTA -->
-            <div class="hidden lg:flex items-center space-x-6">
+            <div class="hidden lg:flex items-center">
                 <a href="#apply"
-                    class="bg-primary hover:bg-secondary text-white px-8 py-3 rounded-lg font-semibold transition-all transform hover:-translate-y-0.5 shadow-lg hover:shadow-xl text-lg">Check
-                    Placement</a>
+                    class="bg-white/20 hover:bg-white/30 border border-white/40 backdrop-blur-sm text-white px-5 py-2 rounded-full font-medium transition-all flex items-center gap-2 shadow-sm text-sm">
+                    Check Placement
+                    <i data-lucide="log-in" class="w-4 h-4"></i>
+                </a>
             </div>
 
             <!-- Mobile Toggle -->
-            <button id="mobile-menu-btn" class="lg:hidden text-gray-900 focus:outline-none">
-                <i data-lucide="menu" class="w-8 h-8"></i>
+            <button id="mobile-menu-btn" class="lg:hidden text-white focus:outline-none hover:text-accent transition-colors">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="5" cy="5" r="2" />
+                    <circle cx="12" cy="5" r="2" />
+                    <circle cx="19" cy="5" r="2" />
+                    <circle cx="5" cy="12" r="2" />
+                    <circle cx="12" cy="12" r="2" />
+                    <circle cx="19" cy="12" r="2" />
+                    <circle cx="5" cy="19" r="2" />
+                    <circle cx="12" cy="19" r="2" />
+                    <circle cx="19" cy="19" r="2" />
+                </svg>
             </button>
         </div>
     </nav>
@@ -92,75 +118,126 @@
     </div>
 
     <!-- Hero Section -->
-    <header id="home" class="min-h-[80vh] flex items-center pt-40 pb-16 relative overflow-hidden">
-        <!-- Background Image -->
-        <img src="image/bece-2019- copy.jpg" alt="BECE Students"
-            class="absolute inset-0 w-full h-full object-cover object-[center_30%]">
-        <!-- Dark Overlay for Readability -->
-        <div class="absolute inset-0 bg-gradient-to-b from-black/60 via-black/50 to-black/70"></div>
+    <header id="home" class="w-full min-h-[100vh] lg:min-h-0 lg:aspect-video relative overflow-hidden group">
+        
+        <!-- Slide 1 -->
+        <div class="hero-slide active-slide absolute inset-0 w-full h-full flex items-center pt-[120px] sm:pt-40 pb-6 sm:pb-16 transition-opacity duration-1000 ease-in-out opacity-100 z-10 pointer-events-auto">
+            <!-- Background Image -->
+            <img src="image/bece-2019- copy.jpg" alt="BECE Students"
+                class="hero-image absolute inset-0 w-full h-full object-cover object-[center_30%]">
+            <!-- Dark Overlay for Readability -->
+            <div class="absolute inset-0 bg-gradient-to-b from-black/60 via-black/50 to-black/70"></div>
 
-        <div class="container mx-auto px-6 text-left slide-up z-10 relative">
-            <h1 class="mb-6 leading-tight tracking-tight max-w-4xl">
-                <span class="block text-3xl md:text-5xl font-medium text-white mb-2">Ghana Education Service</span>
-                <span class="block text-3xl md:text-5xl font-medium text-green-500">School Placement System</span>
-            </h1>
-            <p class="text-lg md:text-xl font-light mb-6 text-white/90 max-w-3xl leading-relaxed opacity-90">
-                Ghana School Placement System is a centralized system use to place students who complete
-                Junior High School (JHS) into Senior High Schools (SHS), Technical and Vocational
-                Education and Training (TVET) institutions, and other second-cycle schools.
-            </p>
-            <p class="text-lg md:text-xl font-light text-white/90 max-w-2xl leading-relaxed opacity-90">
-                It is officially known as the Computerized School Selection and Placement System (CSSPS)
-                and is managed by the Ghana Education Service (GES) under Ministry of Education.
-            </p>
-            <!-- CTA Buttons -->
-            <div class="flex flex-wrap gap-4 mt-6">
-                <a href="#about"
-                    class="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg font-semibold transition-all transform hover:-translate-y-0.5 shadow-lg hover:shadow-xl text-lg min-w-[150px] text-center">Talk
-                    to Expert</a>
-                <a href="#apply"
-                    class="border-2 border-white/40 hover:border-white hover:bg-white/10 text-white px-6 py-3 rounded-lg font-semibold transition-all transform hover:-translate-y-0.5 text-lg min-w-[150px] text-center">Check
-                    Placement</a>
+            <div class="container mx-auto px-4 sm:px-6 text-left z-10 relative overflow-hidden pb-4">
+                <h1 class="anim-up delay-1 mb-3 sm:mb-6 leading-tight tracking-tight max-w-4xl">
+                    <span class="block text-[26px] sm:text-3xl md:text-5xl font-medium text-white mb-1 sm:mb-2">Ghana Education Service</span>
+                    <span class="block text-[26px] sm:text-3xl md:text-5xl font-medium text-accent">School Placement System</span>
+                </h1>
+                <p class="anim-up delay-2 text-base sm:text-lg md:text-xl font-light mb-3 sm:mb-6 text-white max-w-3xl leading-relaxed">
+                    Ghana School Placement System is a centralized system use to place students who complete
+                    Junior High School (JHS) into Senior High Schools (SHS), Technical and Vocational
+                    Education and Training (TVET) institutions, and other second-cycle schools.
+                </p>
+                <p class="anim-up delay-3 text-base sm:text-lg md:text-xl font-light text-white max-w-2xl leading-relaxed">
+                    It is officially known as the Computerized School Selection and Placement System (CSSPS)
+                    and is managed by the Ghana Education Service (GES) under Ministry of Education.
+                </p>
+                <!-- CTA Buttons -->
+                <div class="anim-up delay-4 flex flex-wrap gap-3 sm:gap-4 mt-4 sm:mt-6">
+                    <a href="#about"
+                        class="bg-primary hover:bg-secondary text-white px-6 py-3 rounded-full font-semibold transition-all transform hover:-translate-y-0.5 shadow-lg hover:shadow-xl text-lg min-w-[150px] text-center">Learn
+                        More</a>
+                    <a href="#apply"
+                        class="border-2 border-white/40 hover:border-white hover:bg-white/10 text-white px-6 py-3 rounded-full font-semibold transition-all transform hover:-translate-y-0.5 text-lg min-w-[150px] text-center">Check
+                        Placement</a>
+                </div>
             </div>
         </div>
+
+        <!-- Slide 2 -->
+        <div class="hero-slide absolute inset-0 w-full h-full flex items-center pt-[120px] sm:pt-40 pb-6 sm:pb-16 transition-opacity duration-1000 ease-in-out opacity-0 z-0 pointer-events-none">
+            <!-- Background Image -->
+            <img src="image/1S9A4691.jpg" alt="Future Leaders"
+                class="hero-image absolute inset-0 w-full h-full object-cover object-[center_30%]">
+            <!-- Dark Overlay for Readability -->
+            <div class="absolute inset-0 bg-gradient-to-b from-black/60 via-black/50 to-black/70"></div>
+
+            <div class="container mx-auto px-4 sm:px-6 text-left z-10 relative overflow-hidden pb-4">
+                <h1 class="anim-up delay-1 mb-3 sm:mb-6 leading-tight tracking-tight max-w-4xl">
+                    <span class="block text-[26px] sm:text-3xl md:text-5xl font-medium text-white mb-1 sm:mb-2">Ghana Education Service</span>
+                    <span class="block text-[26px] sm:text-3xl md:text-5xl font-medium text-accent">Computerized School Selection and Placement System</span>
+                </h1>
+                <p class="anim-up delay-2 text-base sm:text-lg md:text-xl font-light mb-3 sm:mb-6 text-white max-w-3xl leading-relaxed">
+                    With the Self-Placement module, every qualified candidate gets the chance to select a learning environment that aligns perfectly with their career aspirations.
+                </p>
+                <p class="anim-up delay-3 text-base sm:text-lg md:text-xl font-light text-white max-w-2xl leading-relaxed">
+                    Join thousands of bright minds navigating seamlessly into their preferred Senior High Schools and TVET institutions across the country.
+                </p>
+                <!-- CTA Buttons -->
+                <div class="anim-up delay-4 flex flex-wrap gap-3 sm:gap-4 mt-4 sm:mt-6">
+                    <a href="#about"
+                        class="bg-primary hover:bg-secondary text-white px-6 py-3 rounded-full font-semibold transition-all transform hover:-translate-y-0.5 shadow-lg hover:shadow-xl text-lg min-w-[150px] text-center">Learn
+                        More
+                        </a>
+                    <a href="#apply"
+                        class="border-2 border-white/40 hover:border-white hover:bg-white/10 text-white px-6 py-3 rounded-full font-semibold transition-all transform hover:-translate-y-0.5 text-lg min-w-[150px] text-center">Check
+                        Placement</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slider Controls -->
+        <!-- Dots -->
+        <div class="absolute bottom-8 left-1/2 -translate-x-1/2 z-30 flex space-x-3">
+            <button class="hero-dot w-3 h-3 rounded-full bg-white transition-all"></button>
+            <button class="hero-dot w-3 h-3 rounded-full bg-white/50 hover:bg-white/80 transition-all"></button>
+        </div>
+        
+        <!-- Arrows -->
+        <button id="hero-prev" class="absolute left-4 lg:left-8 top-1/2 -translate-y-1/2 z-30 bg-black/30 hover:bg-black/60 text-white w-12 h-12 hidden md:flex items-center justify-center rounded-full transition-all opacity-0 group-hover:opacity-100">
+            <i data-lucide="chevron-left" class="w-6 h-6"></i>
+        </button>
+        <button id="hero-next" class="absolute right-4 lg:right-8 top-1/2 -translate-y-1/2 z-30 bg-black/30 hover:bg-black/60 text-white w-12 h-12 hidden md:flex items-center justify-center rounded-full transition-all opacity-0 group-hover:opacity-100">
+            <i data-lucide="chevron-right" class="w-6 h-6"></i>
+        </button>
     </header>
 
     <main id="content">
         <!-- About Section -->
         <section id="about" class="bg-white py-16 md:py-24 fade-in-section">
             <div class="container mx-auto px-6 lg:px-12">
-                <div class="grid lg:grid-cols-2 gap-16 items-stretch">
+                <div class="grid lg:grid-cols-2 gap-16 items-center">
                     <!-- Left Column: All Content -->
                     <div class="space-y-8">
                         <h2
-                            class="text-lg md:text-3xl lg:text-4xl font-bold text-green-600 uppercase tracking-normal lg:tracking-wide leading-tight break-words">
+                            class="text-lg md:text-3xl lg:text-4xl font-bold text-primary uppercase tracking-normal lg:tracking-wide leading-tight break-words">
                             ABOUT CSSPS
                         </h2>
 
                         <div>
                             <h3 class="text-2xl font-semibold text-primary mb-2">What is the CSSPS?</h3>
-                            <div class="bg-green-500 mb-2 w-24 h-[2px] rounded-full"></div>
+                            <div class="group relative w-24 h-[2px] bg-gray-300 mb-2 overflow-hidden cursor-pointer"><div class="absolute top-0 left-0 h-full w-1/3 bg-primary transition-all duration-300 group-hover:w-full rounded-full"></div></div>
                             <p class="text-gray-600 text-lg leading-relaxed mb-2">
                                 The Computerized School Selection and Placement System (CSSPS) is an automated
                                 placement system introduced in 2005 to:
                             </p>
                             <ul class="text-gray-700 text-base space-y-2">
                                 <li class="flex items-center gap-3">
-                                    <span class="w-2 h-2 bg-green-500 rounded-full shrink-0"></span> Ensure transparency
+                                    <span class="w-2 h-2 bg-accent rounded-full shrink-0"></span> Ensure transparency
                                     and
                                     fairness in school placement
                                 </li>
                                 <li class="flex items-center gap-3">
-                                    <span class="w-2 h-2 bg-green-500 rounded-full shrink-0"></span> Reduce human
+                                    <span class="w-2 h-2 bg-accent rounded-full shrink-0"></span> Reduce human
                                     interference
                                 </li>
                                 <li class="flex items-center gap-3">
-                                    <span class="w-2 h-2 bg-green-500 rounded-full shrink-0"></span> Eliminate favouritism
+                                    <span class="w-2 h-2 bg-accent rounded-full shrink-0"></span> Eliminate favouritism
                                     and
                                     corruption
                                 </li>
                                 <li class="flex items-center gap-3">
-                                    <span class="w-2 h-2 bg-green-500 rounded-full shrink-0"></span> Place qualified
+                                    <span class="w-2 h-2 bg-accent rounded-full shrink-0"></span> Place qualified
                                     students
                                     into available schools based on merit and choices
                                 </li>
@@ -170,28 +247,28 @@
                         <div>
                             <h3 class="text-2xl font-semibold text-primary mb-2">Purpose of the School Placement System.
                             </h3>
-                            <div class="bg-green-500 mb-2 w-24 h-[2px] rounded-full"></div>
+                            <div class="group relative w-24 h-[2px] bg-gray-300 mb-2 overflow-hidden cursor-pointer"><div class="absolute top-0 left-0 h-full w-1/3 bg-primary transition-all duration-300 group-hover:w-full rounded-full"></div></div>
                             <p class="text-gray-600 text-lg leading-relaxed mb-2">
                                 The system aims to:
                             </p>
                             <ul class="text-gray-700 text-base space-y-2">
                                 <li class="flex items-start gap-3">
-                                    <span class="w-2 h-2 bg-green-500 rounded-full mt-2 shrink-0"></span> <span
+                                    <span class="w-2 h-2 bg-accent rounded-full mt-2 shrink-0"></span> <span
                                         class="leading-relaxed">Place students based on their
                                         performance in the Basic Education Certificate Examination (BECE)</span>
                                 </li>
                                 <li class="flex items-start gap-3">
-                                    <span class="w-2 h-2 bg-green-500 rounded-full mt-2 shrink-0"></span> <span
+                                    <span class="w-2 h-2 bg-accent rounded-full mt-2 shrink-0"></span> <span
                                         class="leading-relaxed">Match students to schools based on
                                         their selected choices</span>
                                 </li>
                                 <li class="flex items-start gap-3">
-                                    <span class="w-2 h-2 bg-green-500 rounded-full mt-2 shrink-0"></span> <span
+                                    <span class="w-2 h-2 bg-accent rounded-full mt-2 shrink-0"></span> <span
                                         class="leading-relaxed">Ensure balanced distribution of
                                         students across schools nationwide</span>
                                 </li>
                                 <li class="flex items-start gap-3">
-                                    <span class="w-2 h-2 bg-green-500 rounded-full mt-2 shrink-0"></span> <span
+                                    <span class="w-2 h-2 bg-accent rounded-full mt-2 shrink-0"></span> <span
                                         class="leading-relaxed">The BECE is conducted by the West African Examinations
                                         Council (WAEC).</span>
                                 </li>
@@ -200,9 +277,9 @@
                     </div>
 
                     <!-- Right Column: Image -->
-                    <div class="relative h-full">
-                        <img src="image/ICT Cs Eliud Owalo This morning, oversaw the….jpg" alt="ICT and Education"
-                            class="rounded-2xl w-full h-full object-cover shadow-lg">
+                    <div class="relative w-full">
+                        <img src="image/financial-adviser-explaining-retirement-pension-options-old-couple.jpg" alt="About CSSPS"
+                            class="rounded-2xl w-full h-[280px] md:h-auto max-h-[280px] md:max-h-[500px] object-cover shadow-lg mx-auto">
                     </div>
                 </div>
             </div>
@@ -213,7 +290,7 @@
             <div class="container mx-auto px-6 lg:px-12">
                 <div class="text-left mb-10 md:mb-16">
                     <h2
-                        class="text-lg md:text-3xl lg:text-4xl font-bold text-green-600 uppercase tracking-normal lg:tracking-wide leading-tight break-words">
+                        class="text-lg md:text-3xl lg:text-4xl font-bold text-primary uppercase tracking-normal lg:tracking-wide leading-tight break-words">
                         How the School Placement<br>System Works
                     </h2>
                 </div>
@@ -222,17 +299,17 @@
                     <div>
                         <div class="text-xs font-semibold tracking-widest text-gray-900 uppercase mb-3">Phase 1</div>
                         <h3 class="text-3xl md:text-4xl font-semibold text-primary mb-6">School Selection</h3>
-                        <div class="bg-green-500 mb-6 w-32 h-[2px] rounded-full"></div>
+                        <div class="group relative w-32 h-[2px] bg-gray-300 mb-6 overflow-hidden cursor-pointer"><div class="absolute top-0 left-0 h-full w-1/3 bg-primary transition-all duration-300 group-hover:w-full rounded-full"></div></div>
                         <p class="mb-4 text-gray-600 text-xl leading-relaxed font-semibold">Before writing the BECE:
                         </p>
                         <ul class="space-y-4 text-gray-700 text-lg">
                             <li class="flex items-start gap-3">
-                                <span class="flex-shrink-0 w-2 h-2 bg-green-500 rounded-full mt-2"></span>
+                                <span class="flex-shrink-0 w-2 h-2 bg-accent rounded-full mt-2"></span>
                                 <span>JHS students select up to 7 schools in different categories (Category A, B, C,
                                     etc.).</span>
                             </li>
                             <li class="flex items-start gap-3">
-                                <span class="flex-shrink-0 w-2 h-2 bg-green-500 rounded-full mt-2"></span>
+                                <span class="flex-shrink-0 w-2 h-2 bg-accent rounded-full mt-2"></span>
                                 <span>Students also select preferred programs (e.g., General Science, Business,
                                     Technical).</span>
                             </li>
@@ -244,20 +321,20 @@
                     <div class="lg:pl-16 lg:border-l lg:border-gray-200">
                         <div class="text-xs font-semibold tracking-widest text-gray-900 uppercase mb-3">Phase 2</div>
                         <h3 class="text-3xl md:text-4xl font-semibold text-primary mb-6">BECE Results</h3>
-                        <div class="bg-green-500 mb-6 w-32 h-[2px] rounded-full"></div>
+                        <div class="group relative w-32 h-[2px] bg-gray-300 mb-6 overflow-hidden cursor-pointer"><div class="absolute top-0 left-0 h-full w-1/3 bg-primary transition-all duration-300 group-hover:w-full rounded-full"></div></div>
                         <p class="mb-4 text-gray-600 text-xl leading-relaxed font-semibold">After students write the
                             BECE:</p>
                         <ul class="space-y-4 text-gray-700 text-lg">
                             <li class="flex items-start gap-3">
-                                <span class="flex-shrink-0 w-2 h-2 bg-green-500 rounded-full mt-2"></span>
+                                <span class="flex-shrink-0 w-2 h-2 bg-accent rounded-full mt-2"></span>
                                 <span>WAEC releases results.</span>
                             </li>
                             <li class="flex items-start gap-3">
-                                <span class="flex-shrink-0 w-2 h-2 bg-green-500 rounded-full mt-2"></span>
+                                <span class="flex-shrink-0 w-2 h-2 bg-accent rounded-full mt-2"></span>
                                 <span>Student aggregate scores are calculated.</span>
                             </li>
                             <li class="flex items-start gap-3">
-                                <span class="flex-shrink-0 w-2 h-2 bg-green-500 rounded-full mt-2"></span>
+                                <span class="flex-shrink-0 w-2 h-2 bg-accent rounded-full mt-2"></span>
                                 <span>Placement processing begins.</span>
                             </li>
                         </ul>
@@ -266,24 +343,24 @@
                     <div>
                         <div class="text-xs font-semibold tracking-widest text-gray-900 uppercase mb-3">Phase 3</div>
                         <h3 class="text-3xl md:text-4xl font-semibold text-primary mb-6">Computerized Placement</h3>
-                        <div class="bg-green-500 mb-6 w-32 h-[2px] rounded-full"></div>
+                        <div class="group relative w-32 h-[2px] bg-gray-300 mb-6 overflow-hidden cursor-pointer"><div class="absolute top-0 left-0 h-full w-1/3 bg-primary transition-all duration-300 group-hover:w-full rounded-full"></div></div>
                         <p class="mb-4 text-gray-600 text-xl leading-relaxed font-semibold">The GEDP-CSSPS software:
                         </p>
                         <ul class="space-y-4 text-gray-700 mb-6 text-lg">
                             <li class="flex items-start gap-3">
-                                <span class="flex-shrink-0 w-2 h-2 bg-green-500 rounded-full mt-2"></span>
+                                <span class="flex-shrink-0 w-2 h-2 bg-accent rounded-full mt-2"></span>
                                 <span>Matches students’ BECE raw scores</span>
                             </li>
                             <li class="flex items-start gap-3">
-                                <span class="flex-shrink-0 w-2 h-2 bg-green-500 rounded-full mt-2"></span>
+                                <span class="flex-shrink-0 w-2 h-2 bg-accent rounded-full mt-2"></span>
                                 <span>Considers school choices</span>
                             </li>
                             <li class="flex items-start gap-3">
-                                <span class="flex-shrink-0 w-2 h-2 bg-green-500 rounded-full mt-2"></span>
+                                <span class="flex-shrink-0 w-2 h-2 bg-accent rounded-full mt-2"></span>
                                 <span>Considers available vacancies</span>
                             </li>
                             <li class="flex items-start gap-3">
-                                <span class="flex-shrink-0 w-2 h-2 bg-green-500 rounded-full mt-2"></span>
+                                <span class="flex-shrink-0 w-2 h-2 bg-accent rounded-full mt-2"></span>
                                 <span>Places students based on merit, program availability and boarding
                                     status.</span>
                             </li>
@@ -300,21 +377,21 @@
                         <div class="text-xs font-semibold tracking-widest text-gray-900 uppercase mb-3">Phase 4</div>
                         <h3 class="text-3xl md:text-4xl font-semibold text-primary mb-6">Release of Placement
                             Results</h3>
-                        <div class="bg-green-500 mb-6 w-32 h-[2px] rounded-full"></div>
+                        <div class="group relative w-32 h-[2px] bg-gray-300 mb-6 overflow-hidden cursor-pointer"><div class="absolute top-0 left-0 h-full w-1/3 bg-primary transition-all duration-300 group-hover:w-full rounded-full"></div></div>
                         <p class="mb-4 text-gray-600 text-xl leading-relaxed font-semibold">GES releases placement
                             results online.</p>
                         <p class="mb-4 text-gray-600 text-xl">Students can:</p>
                         <ul class="space-y-4 text-gray-700 text-lg">
                             <li class="flex items-start gap-3">
-                                <span class="flex-shrink-0 w-2 h-2 bg-green-500 rounded-full mt-2"></span>
+                                <span class="flex-shrink-0 w-2 h-2 bg-accent rounded-full mt-2"></span>
                                 <span>Check placement using a placement checker card if necessary.</span>
                             </li>
                             <li class="flex items-start gap-3">
-                                <span class="flex-shrink-0 w-2 h-2 bg-green-500 rounded-full mt-2"></span>
+                                <span class="flex-shrink-0 w-2 h-2 bg-accent rounded-full mt-2"></span>
                                 <span>Print placement forms.</span>
                             </li>
                             <li class="flex items-start gap-3">
-                                <span class="flex-shrink-0 w-2 h-2 bg-green-500 rounded-full mt-2"></span>
+                                <span class="flex-shrink-0 w-2 h-2 bg-accent rounded-full mt-2"></span>
                                 <span>Proceed to the assigned school for admission.</span>
                             </li>
                         </ul>
@@ -329,37 +406,37 @@
                 <div class="flex flex-col lg:grid lg:grid-cols-2 gap-8 lg:gap-16 items-stretch mb-10">
                     <!-- Section 1: What If a Student Is Not Placed? -->
                     <div class="order-1">
-                        <h2 class="text-lg md:text-3xl lg:text-4xl font-bold text-green-600 uppercase tracking-normal lg:tracking-wide leading-tight break-words">
+                        <h2 class="text-lg md:text-3xl lg:text-4xl font-bold text-primary uppercase tracking-normal lg:tracking-wide leading-tight break-words">
                             What If a Student Is Not Placed?
                         </h2>
-                        <div class="bg-green-500 mb-2 w-24 h-[2px] rounded-full"></div>
+                        <div class="group relative w-24 h-[2px] bg-gray-300 mb-2 overflow-hidden cursor-pointer"><div class="absolute top-0 left-0 h-full w-1/3 bg-primary transition-all duration-300 group-hover:w-full rounded-full"></div></div>
                         <p class="text-lg font-bold mb-1 text-primary">If a student is not placed automatically:</p>
 
                         <ul class="list-none space-y-1">
                             <li class="flex items-start gap-3 text-gray-500 font-medium">
-                                <span class="w-2 h-2 bg-green-500 rounded-full mt-2.5 shrink-0"></span>
+                                <span class="w-2 h-2 bg-accent rounded-full mt-2.5 shrink-0"></span>
                                 They can use the Self-Placement Module.
                             </li>
                             <li class="flex items-start gap-3 text-gray-500 font-medium">
-                                <span class="w-2 h-2 bg-green-500 rounded-full mt-2.5 shrink-0"></span>
+                                <span class="w-2 h-2 bg-accent rounded-full mt-2.5 shrink-0"></span>
                                 This allows students to choose from schools with available vacancies.
                             </li>
                         </ul>
                     </div>
 
                     <!-- Image - appears between sections on mobile, right side on desktop -->
-                    <div class="order-2 lg:order-2 lg:row-span-2 relative lg:h-auto">
-                        <img src="image/Questionnaire for a Genealogy Interview _ FamilyTree_com copy.jpg" alt="What If a Student Is Not Placed"
-                            class="rounded-2xl w-full h-auto lg:h-full lg:object-cover shadow-sm">
+                    <div class="order-2 lg:order-2 lg:row-span-2 relative flex items-center justify-center">
+                        <img src="image/clueless-puzzled.jpg" alt="What If a Student Is Not Placed"
+                            class="rounded-2xl w-full h-auto transform lg:scale-110 shadow-sm">
                     </div>
 
                     <!-- Section 2: Self Placement -->
                     <div class="order-3 lg:order-3 space-y-6">
                         <div>
-                            <h2 class="text-lg md:text-3xl lg:text-4xl font-bold text-green-600 uppercase tracking-normal lg:tracking-wide leading-tight break-words">
+                            <h2 class="text-lg md:text-3xl lg:text-4xl font-bold text-primary uppercase tracking-normal lg:tracking-wide leading-tight break-words">
                                 SELF PLACEMENT
                             </h2>
-                            <div class="bg-green-500 mb-2 w-24 h-[2px] rounded-full"></div>
+                            <div class="group relative w-24 h-[2px] bg-gray-300 mb-2 overflow-hidden cursor-pointer"><div class="absolute top-0 left-0 h-full w-1/3 bg-primary transition-all duration-300 group-hover:w-full rounded-full"></div></div>
                         </div>
 
                         <div class="space-y-6 text-lg">
@@ -380,22 +457,22 @@
                                 </p>
                                 <ul class="text-gray-700 space-y-1 text-xl">
                                     <li class="flex items-center gap-3">
-                                        <span class="w-2 h-2 bg-green-500 rounded-full shrink-0"></span> <span
+                                        <span class="w-2 h-2 bg-accent rounded-full shrink-0"></span> <span
                                             class="leading-relaxed">They were not matched to any of their selected
                                             schools.</span>
                                     </li>
 
                                     <li class="flex items-center gap-3">
-                                        <span class="w-2 h-2 bg-green-500 rounded-full shrink-0"></span> <span
+                                        <span class="w-2 h-2 bg-accent rounded-full shrink-0"></span> <span
                                             class="leading-relaxed">All their chosen schools were fully occupied.</span>
                                     </li>
                                     <li class="flex items-center gap-3">
-                                        <span class="w-2 h-2 bg-green-500 rounded-full shrink-0"></span> <span
+                                        <span class="w-2 h-2 bg-accent rounded-full shrink-0"></span> <span
                                             class="leading-relaxed">Their aggregate did not meet the cut-off for their chosen
                                             schools.</span>
                                     </li>
                                     <li class="flex items-center gap-3">
-                                        <span class="w-2 h-2 bg-green-500 rounded-full shrink-0"></span> <span
+                                        <span class="w-2 h-2 bg-accent rounded-full shrink-0"></span> <span
                                             class="leading-relaxed">They did not complete school selection properly.</span>
                                     </li>
                                 </ul>
@@ -410,7 +487,7 @@
         <section class="bg-ash py-24">
             <div class="container mx-auto px-6 lg:px-12">
                 <div class="mb-12 text-center">
-                    <h2 class="text-lg md:text-3xl lg:text-4xl font-bold text-green-600 leading-tight break-words">
+                    <h2 class="text-lg md:text-3xl lg:text-4xl font-bold text-primary leading-tight break-words">
                         Step-by-Step: How the Self-Placement Process Works</h2>
                 </div>
 
@@ -562,22 +639,22 @@
                     <div class="lg:pr-16">
                         <h3 class="text-3xl font-bold text-primary mb-2">Important Things to Consider During
                             Self-Placement</h3>
-                        <div class="bg-green-500 mb-6 w-32 h-[2px] rounded-full"></div>
+                        <div class="group relative w-32 h-[2px] bg-gray-300 mb-6 overflow-hidden cursor-pointer"><div class="absolute top-0 left-0 h-full w-1/3 bg-primary transition-all duration-300 group-hover:w-full rounded-full"></div></div>
                         <ul class="space-y-4 text-lg text-gray-700">
                             <li class="flex items-start gap-3">
-                                <span class="w-2 h-2 bg-green-500 rounded-full mt-2.5 shrink-0"></span>
+                                <span class="w-2 h-2 bg-accent rounded-full mt-2.5 shrink-0"></span>
                                 Choose schools with realistic cut-off aggregates.
                             </li>
                             <li class="flex items-start gap-3">
-                                <span class="w-2 h-2 bg-green-500 rounded-full mt-2.5 shrink-0"></span>
+                                <span class="w-2 h-2 bg-accent rounded-full mt-2.5 shrink-0"></span>
                                 Consider day options if boarding spaces are limited.
                             </li>
                             <li class="flex items-start gap-3">
-                                <span class="w-2 h-2 bg-green-500 rounded-full mt-2.5 shrink-0"></span>
+                                <span class="w-2 h-2 bg-accent rounded-full mt-2.5 shrink-0"></span>
                                 Choose programs carefully based on strengths and interest.
                             </li>
                             <li class="flex items-start gap-3">
-                                <span class="w-2 h-2 bg-green-500 rounded-full mt-2.5 shrink-0"></span>
+                                <span class="w-2 h-2 bg-accent rounded-full mt-2.5 shrink-0"></span>
                                 Act quickly before vacancies are filled.
                             </li>
                         </ul>
@@ -587,22 +664,22 @@
                     <div class="lg:pl-16 lg:border-l lg:border-gray-200">
                         <h3 class="text-3xl font-bold text-primary mb-2">Common Reasons Students Are Not Placed
                             Automatically</h3>
-                        <div class="bg-green-500 mb-6 w-32 h-[2px] rounded-full"></div>
+                        <div class="group relative w-32 h-[2px] bg-gray-300 mb-6 overflow-hidden cursor-pointer"><div class="absolute top-0 left-0 h-full w-1/3 bg-primary transition-all duration-300 group-hover:w-full rounded-full"></div></div>
                         <ul class="space-y-4 text-lg text-gray-700">
                             <li class="flex items-start gap-3">
-                                <span class="w-2 h-2 bg-green-500 rounded-full mt-2.5 shrink-0"></span>
+                                <span class="w-2 h-2 bg-accent rounded-full mt-2.5 shrink-0"></span>
                                 Choosing only highly competitive schools.
                             </li>
                             <li class="flex items-start gap-3">
-                                <span class="w-2 h-2 bg-green-500 rounded-full mt-2.5 shrink-0"></span>
+                                <span class="w-2 h-2 bg-accent rounded-full mt-2.5 shrink-0"></span>
                                 Poor BECE performance.
                             </li>
                             <li class="flex items-start gap-3">
-                                <span class="w-2 h-2 bg-green-500 rounded-full mt-2.5 shrink-0"></span>
+                                <span class="w-2 h-2 bg-accent rounded-full mt-2.5 shrink-0"></span>
                                 Limited vacancies in selected programs.
                             </li>
                             <li class="flex items-start gap-3">
-                                <span class="w-2 h-2 bg-green-500 rounded-full mt-2.5 shrink-0"></span>
+                                <span class="w-2 h-2 bg-accent rounded-full mt-2.5 shrink-0"></span>
                                 Errors during school selection.
                             </li>
                         </ul>
@@ -623,7 +700,7 @@
             <div class="container mx-auto px-6 lg:px-12">
                 <div class="mb-16 text-center">
                     <h2
-                        class="text-lg md:text-4xl lg:text-5xl font-bold text-green-600 uppercase tracking-normal lg:tracking-wide inline-block relative pb-2 leading-tight break-words px-4 max-w-full">
+                        class="text-lg md:text-4xl lg:text-5xl font-bold text-primary uppercase tracking-normal lg:tracking-wide inline-block relative pb-2 leading-tight break-words px-4 max-w-full">
                         Common Mistakes to Avoid During Placement
                     </h2>
                 </div>
@@ -773,34 +850,34 @@
                 <div class="bg-white shadow-xl overflow-hidden p-4 md:p-10 lg:p-16 rounded-2xl mt-12">
                     <div class="flex flex-col lg:flex-row gap-8 lg:gap-16 items-center">
                         <div class="lg:w-1/2 order-2 lg:order-1 text-left">
-                            <h3 class="text-4xl font-bold text-green-600 uppercase mb-8 flex items-center gap-4">
-                                <i data-lucide="check-circle" class="w-10 h-10 text-green-600"></i>
+                            <h3 class="text-4xl font-bold text-primary uppercase mb-8 flex items-center gap-4">
+                                <i data-lucide="check-circle" class="w-10 h-10 text-primary"></i>
                                 Final Advice
                             </h3>
                             <p class="text-xl text-gray-700 mb-6 font-semibold">To avoid placement problems:</p>
                             <ul class="space-y-6">
                                 <li class="flex items-start gap-4">
-                                    <span class="w-2.5 h-2.5 bg-green-500 rounded-full mt-2.5 shrink-0"></span>
+                                    <span class="w-2.5 h-2.5 bg-accent rounded-full mt-2.5 shrink-0"></span>
                                     <span class="text-gray-700 text-xl leading-relaxed font-medium">Choose schools
                                         wisely.</span>
                                 </li>
                                 <li class="flex items-start gap-4">
-                                    <span class="w-2.5 h-2.5 bg-green-500 rounded-full mt-2.5 shrink-0"></span>
+                                    <span class="w-2.5 h-2.5 bg-accent rounded-full mt-2.5 shrink-0"></span>
                                     <span class="text-gray-700 text-xl leading-relaxed font-medium">Balance your
                                         options.</span>
                                 </li>
                                 <li class="flex items-start gap-4">
-                                    <span class="w-2.5 h-2.5 bg-green-500 rounded-full mt-2.5 shrink-0"></span>
+                                    <span class="w-2.5 h-2.5 bg-accent rounded-full mt-2.5 shrink-0"></span>
                                     <span class="text-gray-700 text-xl leading-relaxed font-medium">Consider both
                                         boarding and day.</span>
                                 </li>
                                 <li class="flex items-start gap-4">
-                                    <span class="w-2.5 h-2.5 bg-green-500 rounded-full mt-2.5 shrink-0"></span>
+                                    <span class="w-2.5 h-2.5 bg-accent rounded-full mt-2.5 shrink-0"></span>
                                     <span class="text-gray-700 text-xl leading-relaxed font-medium">Select programs
                                         carefully.</span>
                                 </li>
                                 <li class="flex items-start gap-4">
-                                    <span class="w-2.5 h-2.5 bg-green-500 rounded-full mt-2.5 shrink-0"></span>
+                                    <span class="w-2.5 h-2.5 bg-accent rounded-full mt-2.5 shrink-0"></span>
                                     <span class="text-gray-700 text-xl leading-relaxed font-medium">Follow official
                                         instructions strictly</span>
                                 </li>
@@ -865,11 +942,16 @@
 
         // Navbar background change on scroll
         const navbar = document.getElementById('navbar');
+        const topbar = document.getElementById('topbar');
         window.addEventListener('scroll', () => {
             if (window.scrollY > 50) {
-                navbar.classList.add('shadow-md');
+                topbar.classList.add('-translate-y-full');
+                navbar.classList.add('bg-primary/95', 'shadow-lg', 'border-transparent', '!top-0');
+                navbar.classList.remove('bg-black/20', 'border-white/10');
             } else {
-                navbar.classList.remove('shadow-md');
+                topbar.classList.remove('-translate-y-full');
+                navbar.classList.add('bg-black/20', 'border-white/10');
+                navbar.classList.remove('bg-primary/95', 'shadow-lg', 'border-transparent', '!top-0');
             }
         });
 
@@ -908,6 +990,64 @@
                 toggleMenu();
             });
         });
+
+        // Hero Slider
+        const slides = document.querySelectorAll('.hero-slide');
+        const dots = document.querySelectorAll('.hero-dot');
+        const prevBtn = document.getElementById('hero-prev');
+        const nextBtn = document.getElementById('hero-next');
+        let currentSlide = 0;
+        let slideInterval;
+
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                if (i === index) {
+                    slide.classList.remove('opacity-0', 'z-0', 'pointer-events-none');
+                    slide.classList.add('opacity-100', 'z-10', 'pointer-events-auto', 'active-slide');
+                    dots[i].classList.remove('bg-white/50');
+                    dots[i].classList.add('bg-white');
+                } else {
+                    slide.classList.remove('opacity-100', 'z-10', 'pointer-events-auto', 'active-slide');
+                    slide.classList.add('opacity-0', 'z-0', 'pointer-events-none');
+                    dots[i].classList.remove('bg-white');
+                    dots[i].classList.add('bg-white/50');
+                }
+            });
+            currentSlide = index;
+        }
+
+        function nextSlide() {
+            let next = (currentSlide + 1) % slides.length;
+            showSlide(next);
+        }
+
+        function prevSlide() {
+            let prev = (currentSlide - 1 + slides.length) % slides.length;
+            showSlide(prev);
+        }
+
+        if(slides.length > 0) {
+            nextBtn.addEventListener('click', () => {
+                nextSlide();
+                resetInterval();
+            });
+            prevBtn.addEventListener('click', () => {
+                prevSlide();
+                resetInterval();
+            });
+            dots.forEach((dot, index) => {
+                dot.addEventListener('click', () => {
+                    showSlide(index);
+                    resetInterval();
+                });
+            });
+
+            function resetInterval() {
+                clearInterval(slideInterval);
+                slideInterval = setInterval(nextSlide, 9000);
+            }
+            resetInterval();
+        }
     </script>
     <script src="script.js"></script>
     <script>
