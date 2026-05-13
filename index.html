@@ -909,9 +909,46 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-primary py-8 text-center border-t border-secondary">
-        <div class="container mx-auto px-6">
-            <p class="mb-0 text-white/80 font-light">&copy; 2026 Ghana School Placement System. All rights reserved.</p>
+    <footer class="bg-primary pt-16 pb-8 text-white/80 border-t border-secondary">
+        <div class="container mx-auto px-6 lg:px-12">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mb-12">
+                <!-- Branding/Logo -->
+                <div class="space-y-6">
+                    <img src="image/GEDP.png" alt="GEDP Logo" class="h-12 w-auto">
+                    <p class="font-light leading-relaxed max-w-xs">
+                        The Ghana School Placement System (CSSPS) is managed by the Ghana Education Service under the Ministry of Education.
+                    </p>
+                </div>
+
+                <!-- Useful Links -->
+                <div class="space-y-6">
+                    <h4 class="text-white text-lg font-bold uppercase tracking-wider">Useful Links</h4>
+                    <ul class="space-y-4">
+                        <li>
+                            <a href="https://gtvets.gov.gh/" target="_blank" class="hover:text-accent transition-colors flex items-center gap-2">
+                                <i data-lucide="external-link" class="w-4 h-4 text-accent"></i>
+                                GTVET
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://ges.gov.gh/" target="_blank" class="hover:text-accent transition-colors flex items-center gap-2">
+                                <i data-lucide="external-link" class="w-4 h-4 text-accent"></i>
+                                GES
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://waecgh.org/" target="_blank" class="hover:text-accent transition-colors flex items-center gap-2">
+                                <i data-lucide="external-link" class="w-4 h-4 text-accent"></i>
+                                WAEC-GH
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="pt-8 border-t border-white/10 text-center">
+                <p class="text-sm font-light">&copy; 2026 Ghana School Placement System. All rights reserved.</p>
+            </div>
         </div>
     </footer>
 

@@ -41,6 +41,59 @@
         opacity: 1;
         transform: none;
     }
+
+    /* Small Mobile Optimizations (iPhone 4, 5, Galaxy S5) */
+    @media (max-width: 360px) {
+        .hero-slide {
+            padding-top: 85px !important;
+        }
+        
+        .hero-slide h1 span {
+            font-size: 18px !important;
+            line-height: 1.2 !important;
+        }
+        
+        .hero-slide p {
+            font-size: 12px !important;
+            line-height: 1.5 !important;
+            margin-bottom: 12px !important;
+            max-width: 100% !important;
+        }
+
+        .hero-slide .anim-up.delay-3 {
+            display: none !important; /* Hide secondary description to save space on small screens */
+        }
+        
+        .hero-slide .flex-wrap {
+            margin-top: 12px !important;
+            gap: 8px !important;
+        }
+        
+        .hero-slide a {
+            padding: 10px 16px !important;
+            font-size: 15px !important;
+            min-width: 130px !important;
+        }
+    }
+
+    /* Extra Small Height Optimization (iPhone 4) */
+    @media (max-width: 360px) and (max-height: 500px) {
+        .hero-slide {
+            padding-top: 75px !important;
+        }
+        
+        .hero-slide h1 {
+            margin-bottom: 8px !important;
+        }
+
+        .hero-slide p.delay-2 {
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            margin-bottom: 8px !important;
+        }
+    }
 }
 
 /* Custom scrollbar for webkit */
